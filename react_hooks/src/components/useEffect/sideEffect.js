@@ -15,11 +15,11 @@ export default function SideEffect(){
         document.title = 'First Time Titling';
     }, []); // first time rendering will update the title
 
-    // componenetWillUnmount()
-    // useEffect(()=>{
-    //     console.log('Dom rendering each time');
-    //     // setInterval(()=> setDate(new Date()), 1000);
-    // }); // everytime it will render
+    componenetWillUnmount()
+    useEffect(()=>{
+        console.log('Dom rendering each time');
+        setInterval(()=> setDate(new Date()), 1000);
+    }); // everytime it will render
 
     const handleButton = () =>{
         setCount(prev => prev + 1);
